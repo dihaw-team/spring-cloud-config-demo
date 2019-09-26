@@ -55,7 +55,7 @@ petclinic.database: mysql
 spring:
   profiles: mysql
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQLDialect
     platform: mysql
     schema: classpath*:db/mysql/schema.sql
