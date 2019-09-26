@@ -61,6 +61,8 @@ management:
 spring:
   profiles: mysql
   datasource:
+    driver-class-name: org.hibernate.dialect.MySQLDialect
+    platform: mysql
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
     url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
