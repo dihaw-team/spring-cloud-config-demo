@@ -16,14 +16,7 @@ server.port: 0
       
       
       
-petclinic.database: mysql
-spring:
-  datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
-  sleuth:
-    sampler:
-      percentage: 1.0
+
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
@@ -58,6 +51,7 @@ management:
         enabled: true
 
 ---
+petclinic.database: mysql
 spring:
   profiles: mysql
   datasource:
@@ -69,3 +63,6 @@ spring:
     username: root
     password:
     initialization-mode: ALWAYS
+    sleuth:
+       sampler:
+         percentage: 1.0
