@@ -61,7 +61,7 @@ management:
 spring:
   profiles: mysql
   datasource:
-    driver-class-name: org.hibernate.dialect.MySQLDialect
+    driver-class-name: com.mysql.jdbc.Driver
     platform: mysql
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
