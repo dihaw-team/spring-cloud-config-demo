@@ -20,3 +20,23 @@ Patterns proposés par Spring Cloud :
 https://javaetmoi.com/2018/10/architecture-microservices-avec-spring-cloud/
 
 https://blog.xebia.fr/2019/08/08/patterns-de-microservices-avec-spring-cloud-1-2/
+
+
+
+
+#####################
+PROXY Config [config-server APP] --> bootstrap.yml
+
+server.port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dihaw-team/spring-cloud-config-demo
+          skipSslValidation: true
+          proxy:
+            https:
+              host: 10.118.132.13
+              port: 8086
+#####################
