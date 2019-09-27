@@ -3,8 +3,8 @@ Patterns proposés par Spring Cloud :
 	1- Gestion de la configuration WITH [Spring Cloud Config]
   
 	2- Découverte de services WITH [Eureka]		
-    Pour tester l’intégration avec Eureka, nous utiliserons OpenFeign Declarative REST Client : 
-    OpenFeign crée une implémentation dynamique d’une interface décorée avec des annotations JAX-RS ou Spring MVC.)
+    		Pour tester l’intégration avec Eureka, nous utiliserons OpenFeign Declarative REST Client : 
+    		OpenFeign crée une implémentation dynamique d’une interface décorée avec des annotations JAX-RS ou Spring MVC.)
     
 	3- Passerelle de service WITH [Zuul]
   
@@ -20,3 +20,24 @@ Patterns proposés par Spring Cloud :
 https://javaetmoi.com/2018/10/architecture-microservices-avec-spring-cloud/
 
 https://blog.xebia.fr/2019/08/08/patterns-de-microservices-avec-spring-cloud-1-2/
+
+https://insatunisia.github.io/TP-eServices/tp4/
+
+
+
+#####################
+PROXY Config [config-server APP] --> bootstrap.yml
+
+server.port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dihaw-team/spring-cloud-config-demo
+          skipSslValidation: true
+          proxy:
+            https:
+              host: 10.118.132.13
+              port: 8086
+#####################
