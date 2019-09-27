@@ -67,7 +67,4 @@ spring:
     sleuth:
        sampler:
          percentage: 1.0
-    initialization-mode: ALWAYS
-    sleuth:
-       sampler:
-         percentage: 1.0
+
