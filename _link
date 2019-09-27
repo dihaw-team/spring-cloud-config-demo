@@ -3,8 +3,8 @@ Patterns proposés par Spring Cloud :
 	1- Gestion de la configuration WITH [Spring Cloud Config]
   
 	2- Découverte de services WITH [Eureka]		
-    Pour tester l’intégration avec Eureka, nous utiliserons OpenFeign Declarative REST Client : 
-    OpenFeign crée une implémentation dynamique d’une interface décorée avec des annotations JAX-RS ou Spring MVC.)
+    		Pour tester l’intégration avec Eureka, nous utiliserons OpenFeign Declarative REST Client : 
+    		OpenFeign crée une implémentation dynamique d’une interface décorée avec des annotations JAX-RS ou Spring MVC.)
     
 	3- Passerelle de service WITH [Zuul]
   
