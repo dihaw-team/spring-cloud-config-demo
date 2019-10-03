@@ -3,6 +3,9 @@
 # start services on random port by default
 server.port: 0
 
+
+#spring.profiles.active: dev
+
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 spring:
   datasource:
