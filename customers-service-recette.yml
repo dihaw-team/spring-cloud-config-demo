@@ -1,4 +1,5 @@
-﻿
+﻿app.message: This message for the 'customers-service-recette.yml' file
+
 spring:
   profiles: recette
 eureka:
