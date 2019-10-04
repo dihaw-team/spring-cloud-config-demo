@@ -1,0 +1,15 @@
+﻿
+spring:
+  profiles: prod
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/petclinic?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  dialect: org.hibernate.dialect.MySQLDialect
+  username: root
+  password: admin
+
+hibernate:
+  dialect: hibernate.dialect
