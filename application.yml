@@ -3,8 +3,7 @@
 app.message: This message for the ${spring.application.name} app, from the Default Environment
 
 # start services on random port by default
-server:
-	port: 0
+server.port: 0
 
 
 #spring.profiles.active: dev
