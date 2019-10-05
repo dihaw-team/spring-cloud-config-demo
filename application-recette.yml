@@ -1,6 +1,6 @@
 # COMMON APPLICATION PROPERTIES
 
-app.message= This message for the ${spring.application.name} app, from the DEV Environment
+app.message: This message for the ${spring.application.name} app, from the RECETTE Environment
 
 # start services on random port by default
 server.port: 0
