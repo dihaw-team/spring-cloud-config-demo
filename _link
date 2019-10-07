@@ -11,6 +11,15 @@ Patterns proposés par Spring Cloud :
 	4- Circuit breaker, Fallback processing, Bulkhead WITH [Hystrix]
 	
 	
+	
+----------------------------Feign-----------------------------------------------------------	
+
+	Feign est un client HTTP qui facilite grandement l'appel des API exposées par les différents Microservices. 
+	Il est donc capable de créer et d'exécuter des requêtes HTTP basées sur les annotations 
+	et informations que l'on fournit.
+	Il se présente sous forme de dépendance à ajouter au Microservices.
+	
+	https://openclassrooms.com/fr/courses/4668216-optimisez-votre-architecture-microservices/5176263-faites-communiquer-vos-microservices-grace-a-feign
 
 ----------------------------Zuul vs Spring Cloud Gateway------------------------------------
 
@@ -21,9 +30,6 @@ Rooting your applications:
 		Zuul: 					"Spring Boot", "Eureka Discovery", and "Zuul"
 		Spring cloud Gateway: 	"Spring Boot", "Eureka Discovery", and "Gateway" 
 		
-		
-Bblocking Gateway: 		Zuul 1, Ngnix
-Non-Blocking Gateway: 	Spring Cloud Gateway, Zuul 2, Linkerd, Envoy
 		
 Unlike Zuul, Spring cloud Gateway doesn't automatically look in Eureka for routing calls. 
 So we enabled it by adding a couple of additional properties:
@@ -41,6 +47,13 @@ application.properties
 		eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
 		spring.cloud.gateway.discovery.locator.enabled=true
 		spring.cloud.gateway.discovery.locator.lowerCaseServiceId=tru
+		
+		
+		
+Blocking Gateway: 		Zuul 1, Ngnix
+Non-Blocking Gateway: 	Spring Cloud Gateway, Zuul 2, Linkerd, Envoy		
+		
+		
 -------------------------------------------------------------------------------------------
 	
 
