@@ -9,8 +9,40 @@ Patterns proposés par Spring Cloud :
 	3- Passerelle de service WITH [Zuul]
   
 	4- Circuit breaker, Fallback processing, Bulkhead WITH [Hystrix]
+	
+	
 
+----------------------------Zuul vs Spring Cloud Gateway------------------------------------
 
+	
+Rooting your applications:
+	Edge Server : [Netflix Zuul] or [Spring Cloud Gateway]: 
+	dependencies:
+		Zuul: 					"Spring Boot", "Eureka Discovery", and "Zuul"
+		Spring cloud Gateway: 	"Spring Boot", "Eureka Discovery", and "Gateway" 
+		
+		
+Bblocking Gateway: 		Zuul 1, Ngnix
+Non-Blocking Gateway: 	Spring Cloud Gateway, Zuul 2, Linkerd, Envoy
+		
+Unlike Zuul, Spring cloud Gateway doesn't automatically look in Eureka for routing calls. 
+So we enabled it by adding a couple of additional properties:
+	spring.cloud.gateway.discovery.locator.enabled=true
+	spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
+	
+application.properties	
+	Zuul
+		server.port=8050
+		spring.application.name=zuul-edge-server
+		eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/	
+	Spring bloud Gateway
+		server.port=8060
+		spring.application.name=gateway-edge-server
+		eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+		spring.cloud.gateway.discovery.locator.enabled=true
+		spring.cloud.gateway.discovery.locator.lowerCaseServiceId=tru
+-------------------------------------------------------------------------------------------
+	
 
 
 
@@ -22,6 +54,8 @@ https://javaetmoi.com/2018/10/architecture-microservices-avec-spring-cloud/
 https://blog.xebia.fr/2019/08/08/patterns-de-microservices-avec-spring-cloud-1-2/
 
 https://insatunisia.github.io/TP-eServices/tp4/
+
+https://engineering.opsgenie.com/comparing-api-gateway-performances-nginx-vs-zuul-vs-spring-cloud-gateway-vs-linkerd-b2cc59c65369
 
 
 
