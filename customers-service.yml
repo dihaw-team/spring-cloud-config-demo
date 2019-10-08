@@ -1,4 +1,4 @@
-﻿app.message: This message for the 'customers-service.yml' file
+﻿app.message: This message form the 'customers-service.yml' file
 
 eureka:
   instance:
