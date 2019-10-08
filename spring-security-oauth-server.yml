@@ -1,4 +1,7 @@
-﻿app.message: This message form the 'spring-security-oauth-server.yml' file
+﻿server:
+  port: 8081
+
+app.message: This message form the 'spring-security-oauth-server.yml' file
 
 
 eureka:
